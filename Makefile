@@ -6,6 +6,18 @@ DATE=$(shell date +%I:%M%p)
 CHECK=\033[32m✔\033[39m
 HR=\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#
 
+.PHONY: stuypulse
+
+#
+# REPLACE OLD FILES IN STUYPULSE REPO WITH NEWLY BUILT FILES
+# ONLY RUN FROM SUBMODULE OF prog694/prog694.github.com
+#
+stuypulse: bootstrap
+	mv bootstrap/css/bootstrap.min.css ../css
+	mv bootstrap/css/bootstrap-responsive.min.css ../css
+	mv bootstrap/js/bootstrap.min.js ../js/vendor
+	rm -r bootstrap
+
 
 #
 # BUILD DOCS
