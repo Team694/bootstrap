@@ -13,6 +13,8 @@ body {
   line-height: @baseLineHeight;
   color: @textColor;
   background-color: @bodyBackground;
+  padding-top: 60px;
+  padding-bottom: 40px;
 }
 
 
@@ -22,10 +24,7 @@ body {
 a {
   color: @linkColor;
   text-decoration: none;
-  -moz-transition: color 0.3s;
-  -webkit-transition: color 0.3s;
-  -o-transition: color 0.3s;
-  transition: color 0.3s;
+  .transition(color 0.3s);
 }
 a:hover {
   color: @linkColorHover;
